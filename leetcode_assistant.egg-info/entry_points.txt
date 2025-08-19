@@ -1,0 +1,2 @@
+[console_scripts]
+leetcode-assistant = src.cli:main
