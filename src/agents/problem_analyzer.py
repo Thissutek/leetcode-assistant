@@ -7,9 +7,13 @@ structured information, classify the problem, and provide initial insights.
 
 import os
 from typing import Optional
+from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
+
+# Load environment variables from .env file
+load_dotenv()
 
 from ..graph.state import WorkflowState, ProblemDetails, DifficultyLevel, ProblemType
 from ..utils.leetcode_parser import parse_leetcode_problem
